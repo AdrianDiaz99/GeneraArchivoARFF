@@ -56,20 +56,14 @@ public class GeneraArchivoARFF {
             nivel = "Anciano";
         }
 
-        int control;
-
-        control = r.nextInt(3);
-        switch (control) {
-            case 0:
+        if(hora >= 5 && hora < 12)
                 turno = "Matutino";
-                break;
-            case 1:
+        if(hora >= 12 && hora < 19)
                 turno = "Vespertino";
-                break;
-            case 2:
+        if(hora >= 19 || hora < 5)
                 turno = "Nocturno";
-                break;
-        }
+
+        int control;
 
         control = r.nextInt(4);
         switch (control) {
